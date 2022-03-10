@@ -1,0 +1,154 @@
+# Simulation of beam spread for two mice in a row
+#Ts/G4DataDirectory = "/Applications/G4Data"
+#Ts/UseQt = "true"
+i:Ts/MaxInterruptedHistories = 100
+i:Ts/NumberOfThreads = 6
+Ts/ShowHistoryCountAtInterval = 1000
+b:Ge/CheckForOverlaps = "True"
+Ge/QuitIfOverlapDetected = "True"
+
+#Source
+s:So/ExpRoom/Type       = "Emittance"
+s:So/ExpRoom/Component  = "SourceStart"
+s:So/ExpRoom/BeamParticle      = "proton"
+d:So/ExpRoom/BeamEnergy        = 228.5 MeV
+s:So/ExpRoom/Distribution = "BiGaussian" # distribution name
+d:So/ExpRoom/SigmaX = 3.2 mm # std of x positions
+u:So/ExpRoom/SigmaXprime = 0.0035 # std of x’, note that it’s unitless. 1 equals to 1.0 rad.
+u:So/ExpRoom/CorrelationX = 1 # correlation of x and x’
+d:So/ExpRoom/SigmaY = 2.3 mm # std of y positions
+u:So/ExpRoom/SigmaYPrime = 0.0026 # std of y’
+u:So/ExpRoom/CorrelationY = 1 # correlation of y and y’
+u:So/ExpRoom/BeamEnergySpread  = 0
+i:So/ExpRoom/NumberOfHistoriesInRun = 1000000
+
+
+#Geometries
+Ge/World/HLX  = 2.5 m
+Ge/World/HLY  = 2.5 m
+Ge/World/HLZ  = 2.5 m
+Ge/World/Material  = "Air"
+b:Ge/World/Invisible = "True"
+
+s:Ge/SourceStart/Type   = "Group"
+s:Ge/SourceStart/Parent = "World"
+d:Ge/SourceStart/TransZ = Ge/Scatterer1/TransZ - 0.5 cm
+
+#Scatter 1:
+s:Ge/Scatterer1/Type       = "TsCylinder"
+s:Ge/Scatterer1/Parent     = "World"
+s:Ge/Scatterer1/Material   = "Lead"
+d:Ge/Scatterer1/RMin       = 0.0 cm
+d:Ge/Scatterer1/RMax       = 5.0 cm
+d:Ge/Scatterer1/HL         = 0.02032 cm
+d:Ge/Scatterer1/TransZ     = -134 cm
+
+#Scatter 2:
+s:Ge/Scatterer2/Type       = "TsCylinder"
+s:Ge/Scatterer2/Parent     = "World"
+s:Ge/Scatterer2/Material   = "Mylar"
+d:Ge/Scatterer2/RMin       = Ge/LeadScatterer2/RMax cm
+d:Ge/Scatterer2/RMax       = 5.0 cm
+d:Ge/Scatterer2/HL         = Ge/LeadScatterer2/HL cm
+d:Ge/Scatterer2/TransZ 	= Ge/LeadScatterer2/TransZ - 0.05 cm
+
+
+s:Ge/LeadScatterer2/Type       = "TsCylinder"
+s:Ge/LeadScatterer2/Parent     = "World"
+s:Ge/LeadScatterer2/Material   = "Lead"
+d:Ge/LeadScatterer2/RMin       = 0.0  cm
+d:Ge/LeadScatterer2/RMax       = 0.165 cm
+d:Ge/LeadScatterer2/HL         = 0.04064 cm
+
+d:Ge/LeadScatterer2/TransZ    = -87.01 cm
+
+
+#Aperture THIQQ
+s:Ge/Aperture/Type       = "TsCylinder"
+s:Ge/Aperture/Parent     = "World"
+s:Ge/Aperture/Material   = "Brass"
+d:Ge/Aperture/RMin       = 0  cm
+d:Ge/Aperture/RMax       = 15.0 cm
+d:Ge/Aperture/HL         = 3.81 cm
+d:Ge/Aperture/TransZ     = -9.0 cm
+
+# Aperture hole 
+s:Ge/ApScore/Type       = "G4EllipticalTube"
+s:Ge/ApScore/Parent     = "Aperture"
+s:Ge/ApScore/Material   = "Air"
+d:Ge/ApScore/RMin       = 0.0  cm
+d:Ge/ApScore/RMax       = Ge/Aperture/RMin cm
+d:Ge/ApScore/HLX         = 0.8 cm #0.8 cm
+d:Ge/ApScore/HLY         = 0.6 cm #0.6 cm
+d:Ge/ApScore/HLZ         = Ge/Aperture/HL cm
+d:Ge/ApScore/TransX     = 0 cm
+d:Ge/ApScore/TransY     = 0 cm
+d:Ge/ApScore/TransZ     = 0 cm
+i:Ge/ApScore/XBins      = 1
+i:Ge/ApScore/YBins      = 1
+i:Ge/ApScore/ZBins      = 1
+
+
+#Aperture Score
+#s:Sc/OnlyIncludeParticlesNamed/Quantity = "SurfaceTrackCount"
+#s:Sc/OnlyIncludeParticlesNamed/Component   = "ApScore"
+#s:Sc/OnlyIncludeParticlesNamed/Surface = "ApScore/ZMinusSurface"
+#b:Sc/OnlyIncludeParticlesNamed/OutputToConsole = "TRUE"
+#s:Sc/OnlyIncludeParticlesNamed/OutputType = "csv"
+#s:Sc/OnlyIncludeParticlesNamed/IfOutputFileAlreadyExists = "Overwrite"
+#sv:Sc/OnlyIncludeParticlesNamed/OnlyIncludeParticlesNamed = 1 "proton"
+#s:Sc/OnlyIncludeParticlesNamed/OutputFile  = "ProtonCount_ApertureHole"
+
+
+#Plastic Aperture Scatter Plexiglass
+s:Ge/Plastic/Type       = "TsBox"
+s:Ge/Plastic/Parent     = "World"
+s:Ge/Plastic/Material   = "Lexan"
+d:Ge/Plastic/HLX        = 10. cm
+d:Ge/Plastic/HLY        = 10. cm
+d:Ge/Plastic/HLZ        = 1.175 cm
+d:Ge/Plastic/TransZ     = -2.9 cm
+
+
+# Mouse/Phantom position
+d:Ge/Mouse/TransX      = 0.0 cm
+d:Ge/Mouse1/TransZ     = 2.5 cm 
+
+#Scoring Mouse/Phantom 1
+s:Ge/ScoringBox1/Type       = "TsBox"
+s:Ge/ScoringBox1/Parent     = "World"
+s:Ge/ScoringBox1/Material   = "G4_WATER"
+d:Ge/ScoringBox1/HLX        = 5. cm
+d:Ge/ScoringBox1/HLY        = 5. cm
+d:Ge/ScoringBox1/HLZ        = 2.5 cm
+d:Ge/ScoringBox1/TransX     = Ge/Mouse/TransX cm
+d:Ge/ScoringBox1/TransZ     = Ge/Mouse1/TransZ cm
+
+s:Sc/Dose1/Quantity           = "DoseToMedium"
+s:Sc/Dose1/Component          = "ScoringBox1"
+s:Sc/Dose1/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/Dose1/OutputFile         = "Dose_Mouse1"
+
+s:Sc/Dose1_binned/Quantity    = "DoseToMedium"
+s:Sc/Dose1_binned/Component   = "ScoringBox1"
+s:Sc/Dose1_binned/IfOutputFileAlreadyExists = "Overwrite"
+s:Sc/Dose1_binned/OutputFile  = "Dose_Mouse1_binned"
+i:Sc/Dose1_binned/XBins    	  = 125
+i:Sc/Dose1_binned/YBins       = 125
+i:Sc/Dose1_binned/ZBins       = 125
+
+
+# GRAPHICS
+#sv:Ph/Default/Modules = 1 "g4em-standard_opt0"
+#b:Ts/PauseBeforeQuit = "True"
+#s:Gr/ViewA/Type             = "OpenGL"
+#i:Gr/ViewA/WindowSizeX      = 700
+#i:Gr/ViewA/WindowSizeY      = 700
+#d:Gr/ViewA/Theta            = 55 deg
+#d:Gr/ViewA/Phi              = 20 deg
+#s:Gr/ViewA/Projection       = "Orthogonal"
+#d:Gr/ViewA/PerspectiveAngle = 20 deg
+#u:Gr/ViewA/Zoom             = 1.6
+#b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+#b:Gr/ViewA/IncludeAxes   = "true"
+#d:Gr/ViewA/AxesSize      = 0.25 m

@@ -1,0 +1,82 @@
+# Ridge filter
+#Ts/G4DataDirectory = "/Applications/G4Data"
+#Ts/UseQt = "true"
+d:Ge/World/HLX       = 0.3 m
+d:Ge/World/HLY       = 0.3 m
+d:Ge/World/HLZ       = 0.3 m
+b:Ge/World/Invisible = "True"
+
+# CHECKS
+b:Ge/CheckForOverlaps = "True"
+Ge/QuitIfOverlapDetected = "True"
+
+
+######################################
+# RidgeFilter Group
+######################################
+s:Ge/RidgeGroup/Parent = "World"
+s:Ge/RidgeGroup/Type   = "Group"
+d:Ge/RidgeGroup/RotX   = 0.0 deg
+d:Ge/RidgeGroup/RotY   = 0.0 deg
+d:Ge/RidgeGroup/RotZ   = 0.0 deg
+d:Ge/RidgeGroup/TransX = 0.0 cm
+d:Ge/RidgeGroup/TransY = 0.0 cm
+d:Ge/RidgeGroup/TransZ = 0.0 cm
+ 
+# MATERIAL
+sv:Ma/PLA/Components = 3 "Hydrogen" "Carbon" "Oxygen"
+uv:Ma/PLA/Fractions = 3 0.0714 0.6428 0.2857
+d:Ma/PLA/Density = 1.867 g/cm3
+s:Ma/PLA/State = "Solid"
+d:Ma/PLA/Temperature = 293 kelvin
+sv:Ma/Carbon/Components = 1 "Carbon"
+d:Ma/Carbon/MeanExcitationEnergy = 81.0 eV
+sv:Ma/Hydrogen/Components = 1 "Hydrogen"
+d:Ma/Hydrogen/MeanExcitationEnergy = 19.2 eV
+sv:Ma/Oxygen/Components = 1 "Oxygen"
+d:Ma/Oxygen/MeanExcitationEnergy = 95.0 eV
+s:Ma/PLA/DefaultColor = "grey"
+s:El/PLA/Symbol = "PLA"
+iv:Gr/Color/Grey = 3 255 255 255
+
+
+#######################################
+# Ridge Filter Proximal and Middle Peak
+#######################################
+s:Ge/RidgeFilterA/Type     = "TsRidgeFilter"
+s:Ge/RidgeFilterA/Parent   = "RidgeGroup"
+s:Ge/RidgeFilterA/Material = "PLA"
+d:Ge/RidgeFilterA/TransX   = 0.0 cm
+d:Ge/RidgeFilterA/TransY   = 0.0 cm
+d:Ge/RidgeFilterA/TransZ   = 0.45 cm
+d:Ge/RidgeFilterA/RotX     = 0.0 deg
+d:Ge/RidgeFilterA/RotY     = 0.0 deg
+d:Ge/RidgeFilterA/RotZ     = 0.0 deg
+s:Ge/RidgeFilterA/DrawingStyle 	   = "Solid"
+b:Ge/RidgeFilterA/PrintInformation = "True"
+
+# Ridge Geometry: TOPAS will connect points of x and z to build a ridge.
+# Then copy a ridge and Lucitece it using Displacement parameter
+dv:Ge/RidgeFilterA/XPoints  = 24
+0	0	0.747	0.747	1.657	1.657	3.151	3.151	4.051	4.051	5.545	5.545	6.455	6.455	7.949	7.949	8.849	8.849	10.343	10.343	11.253	11.253	12	12 mm
+dv:Ge/RidgeFilterA/ZPoints  = 24
+0	0.5	0.5	9.3	9.3	0.5	0.5	18	18	0.5	0.5	9.3	9.3	0.5	0.5	18	18	0.5	0.5	9.3	9.3	0.5	0.5	0 mm
+d:Ge/RidgeFilterA/Width         = 12.0 mm
+d:Ge/RidgeFilterA/Length        = 60.0 mm
+dv:Ge/RidgeFilterA/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+
+
+#sv:Ph/Default/Modules = 1 "g4em-standard_opt0"
+#b:Ts/PauseBeforeQuit = "True"
+#s:Gr/ViewA/Type             = "OpenGL"
+#i:Gr/ViewA/WindowSizeX      = 600
+#i:Gr/ViewA/WindowSizeY      = 600
+#d:Gr/ViewA/Theta            = 55 deg
+#d:Gr/ViewA/Phi              = 20 deg
+#s:Gr/ViewA/Projection       = "Orthogonal"
+#d:Gr/ViewA/PerspectiveAngle = 20 deg
+#u:Gr/ViewA/Zoom             = 1.6
+#b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+#b:Gr/ViewA/IncludeAxes   = "true"
+#s:Gr/ViewA/AxesComponent = "RidgeGroup"
+#d:Gr/ViewA/AxesSize      = 5 cm

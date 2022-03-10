@@ -1,0 +1,1120 @@
+# INITIALIZE
+#Ts/G4DataDirectory = "/Applications/G4Data"
+#Ts/UseQt = "true"
+i:Ts/MaxInterruptedHistories = 100
+i:Ts/NumberOfThreads = 6
+                         
+# CHECKS
+b:Ge/CheckForOverlaps = "True"
+Ge/QuitIfOverlapDetected = "True"
+                         
+# GEOMETRIES
+d:Ge/World/HLX = 2.5 m
+d:Ge/World/HLY = 2.5 m
+d:Ge/World/HLZ = 2.5 m
+Ge/World/Material  = "Air"
+b:Ge/World/Invisible = "True"
+                         
+# DEFINE GROUP 
+s:Ge/RidgeGroup/Parent = "World"
+s:Ge/RidgeGroup/Type   = "Group"
+d:Ge/RidgeGroup/RotX   = 0.0 deg
+d:Ge/RidgeGroup/RotY   = 0.0 deg
+d:Ge/RidgeGroup/RotZ   = 0.0 deg
+d:Ge/RidgeGroup/TransX = 0.0 cm
+d:Ge/RidgeGroup/TransY = 0.0 cm
+d:Ge/RidgeGroup/TransZ = 0.0 cm
+                       
+############  RF1#############
+s:Ge/RF1/Parent = "RidgeGroup"
+s:Ge/RF1/Type = "TsRidgeFilter"
+s:Ge/RF1/Material   = "Lucite"
+d:Ge/RF1/TransX = 0.0 mm
+d:Ge/RF1/TransY =-30 mm
+d:Ge/RF1/TransZ =12.25 mm
+s:Ge/RF1/DrawingStyle = "Solid"
+s:Ge/RF1/Color = "red"
+b:Ge/RF1/PrintInformation = "True"
+dv:Ge/RF1/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF1/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF1/Width = 12.0 mm
+d:Ge/RF1/Length = 1.0 mm
+dv:Ge/RF1/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF2#############
+s:Ge/RF2/Parent = "RidgeGroup"
+s:Ge/RF2/Type = "TsRidgeFilter"
+s:Ge/RF2/Material   = "Lucite"
+d:Ge/RF2/TransX = 0.0 mm
+d:Ge/RF2/TransY =-29 mm
+d:Ge/RF2/TransZ =12.25 mm
+s:Ge/RF2/DrawingStyle = "Solid"
+s:Ge/RF2/Color = "red"
+b:Ge/RF2/PrintInformation = "True"
+dv:Ge/RF2/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF2/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF2/Width = 12.0 mm
+d:Ge/RF2/Length = 1.0 mm
+dv:Ge/RF2/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF3#############
+s:Ge/RF3/Parent = "RidgeGroup"
+s:Ge/RF3/Type = "TsRidgeFilter"
+s:Ge/RF3/Material   = "Lucite"
+d:Ge/RF3/TransX = 0.0 mm
+d:Ge/RF3/TransY =-28 mm
+d:Ge/RF3/TransZ =12.25 mm
+s:Ge/RF3/DrawingStyle = "Solid"
+s:Ge/RF3/Color = "red"
+b:Ge/RF3/PrintInformation = "True"
+dv:Ge/RF3/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF3/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF3/Width = 12.0 mm
+d:Ge/RF3/Length = 1.0 mm
+dv:Ge/RF3/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF4#############
+s:Ge/RF4/Parent = "RidgeGroup"
+s:Ge/RF4/Type = "TsRidgeFilter"
+s:Ge/RF4/Material   = "Lucite"
+d:Ge/RF4/TransX = 0.0 mm
+d:Ge/RF4/TransY =-27 mm
+d:Ge/RF4/TransZ =12.25 mm
+s:Ge/RF4/DrawingStyle = "Solid"
+s:Ge/RF4/Color = "red"
+b:Ge/RF4/PrintInformation = "True"
+dv:Ge/RF4/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF4/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF4/Width = 12.0 mm
+d:Ge/RF4/Length = 1.0 mm
+dv:Ge/RF4/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF5#############
+s:Ge/RF5/Parent = "RidgeGroup"
+s:Ge/RF5/Type = "TsRidgeFilter"
+s:Ge/RF5/Material   = "Lucite"
+d:Ge/RF5/TransX = 0.0 mm
+d:Ge/RF5/TransY =-26 mm
+d:Ge/RF5/TransZ =12.25 mm
+s:Ge/RF5/DrawingStyle = "Solid"
+s:Ge/RF5/Color = "red"
+b:Ge/RF5/PrintInformation = "True"
+dv:Ge/RF5/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF5/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF5/Width = 12.0 mm
+d:Ge/RF5/Length = 1.0 mm
+dv:Ge/RF5/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF6#############
+s:Ge/RF6/Parent = "RidgeGroup"
+s:Ge/RF6/Type = "TsRidgeFilter"
+s:Ge/RF6/Material   = "Lucite"
+d:Ge/RF6/TransX = 0.0 mm
+d:Ge/RF6/TransY =-25 mm
+d:Ge/RF6/TransZ =12.25 mm
+s:Ge/RF6/DrawingStyle = "Solid"
+s:Ge/RF6/Color = "red"
+b:Ge/RF6/PrintInformation = "True"
+dv:Ge/RF6/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF6/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF6/Width = 12.0 mm
+d:Ge/RF6/Length = 1.0 mm
+dv:Ge/RF6/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF7#############
+s:Ge/RF7/Parent = "RidgeGroup"
+s:Ge/RF7/Type = "TsRidgeFilter"
+s:Ge/RF7/Material   = "Lucite"
+d:Ge/RF7/TransX = 0.0 mm
+d:Ge/RF7/TransY =-24 mm
+d:Ge/RF7/TransZ =12.25 mm
+s:Ge/RF7/DrawingStyle = "Solid"
+s:Ge/RF7/Color = "red"
+b:Ge/RF7/PrintInformation = "True"
+dv:Ge/RF7/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF7/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF7/Width = 12.0 mm
+d:Ge/RF7/Length = 1.0 mm
+dv:Ge/RF7/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF8#############
+s:Ge/RF8/Parent = "RidgeGroup"
+s:Ge/RF8/Type = "TsRidgeFilter"
+s:Ge/RF8/Material   = "Lucite"
+d:Ge/RF8/TransX = 0.0 mm
+d:Ge/RF8/TransY =-23 mm
+d:Ge/RF8/TransZ =12.25 mm
+s:Ge/RF8/DrawingStyle = "Solid"
+s:Ge/RF8/Color = "red"
+b:Ge/RF8/PrintInformation = "True"
+dv:Ge/RF8/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF8/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF8/Width = 12.0 mm
+d:Ge/RF8/Length = 1.0 mm
+dv:Ge/RF8/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF9#############
+s:Ge/RF9/Parent = "RidgeGroup"
+s:Ge/RF9/Type = "TsRidgeFilter"
+s:Ge/RF9/Material   = "Lucite"
+d:Ge/RF9/TransX = 0.0 mm
+d:Ge/RF9/TransY =-22 mm
+d:Ge/RF9/TransZ =12.25 mm
+s:Ge/RF9/DrawingStyle = "Solid"
+s:Ge/RF9/Color = "red"
+b:Ge/RF9/PrintInformation = "True"
+dv:Ge/RF9/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF9/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF9/Width = 12.0 mm
+d:Ge/RF9/Length = 1.0 mm
+dv:Ge/RF9/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF10#############
+s:Ge/RF10/Parent = "RidgeGroup"
+s:Ge/RF10/Type = "TsRidgeFilter"
+s:Ge/RF10/Material   = "Lucite"
+d:Ge/RF10/TransX = 0.0 mm
+d:Ge/RF10/TransY =-21 mm
+d:Ge/RF10/TransZ =12.25 mm
+s:Ge/RF10/DrawingStyle = "Solid"
+s:Ge/RF10/Color = "red"
+b:Ge/RF10/PrintInformation = "True"
+dv:Ge/RF10/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF10/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF10/Width = 12.0 mm
+d:Ge/RF10/Length = 1.0 mm
+dv:Ge/RF10/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF11#############
+s:Ge/RF11/Parent = "RidgeGroup"
+s:Ge/RF11/Type = "TsRidgeFilter"
+s:Ge/RF11/Material   = "Lucite"
+d:Ge/RF11/TransX = 0.0 mm
+d:Ge/RF11/TransY =-20 mm
+d:Ge/RF11/TransZ =12.25 mm
+s:Ge/RF11/DrawingStyle = "Solid"
+s:Ge/RF11/Color = "red"
+b:Ge/RF11/PrintInformation = "True"
+dv:Ge/RF11/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF11/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF11/Width = 12.0 mm
+d:Ge/RF11/Length = 1.0 mm
+dv:Ge/RF11/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF12#############
+s:Ge/RF12/Parent = "RidgeGroup"
+s:Ge/RF12/Type = "TsRidgeFilter"
+s:Ge/RF12/Material   = "Lucite"
+d:Ge/RF12/TransX = 0.0 mm
+d:Ge/RF12/TransY =-19 mm
+d:Ge/RF12/TransZ =12.25 mm
+s:Ge/RF12/DrawingStyle = "Solid"
+s:Ge/RF12/Color = "red"
+b:Ge/RF12/PrintInformation = "True"
+dv:Ge/RF12/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF12/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF12/Width = 12.0 mm
+d:Ge/RF12/Length = 1.0 mm
+dv:Ge/RF12/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF13#############
+s:Ge/RF13/Parent = "RidgeGroup"
+s:Ge/RF13/Type = "TsRidgeFilter"
+s:Ge/RF13/Material   = "Lucite"
+d:Ge/RF13/TransX = 0.0 mm
+d:Ge/RF13/TransY =-18 mm
+d:Ge/RF13/TransZ =12.25 mm
+s:Ge/RF13/DrawingStyle = "Solid"
+s:Ge/RF13/Color = "red"
+b:Ge/RF13/PrintInformation = "True"
+dv:Ge/RF13/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF13/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF13/Width = 12.0 mm
+d:Ge/RF13/Length = 1.0 mm
+dv:Ge/RF13/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF14#############
+s:Ge/RF14/Parent = "RidgeGroup"
+s:Ge/RF14/Type = "TsRidgeFilter"
+s:Ge/RF14/Material   = "Lucite"
+d:Ge/RF14/TransX = 0.0 mm
+d:Ge/RF14/TransY =-17 mm
+d:Ge/RF14/TransZ =12.25 mm
+s:Ge/RF14/DrawingStyle = "Solid"
+s:Ge/RF14/Color = "red"
+b:Ge/RF14/PrintInformation = "True"
+dv:Ge/RF14/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF14/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF14/Width = 12.0 mm
+d:Ge/RF14/Length = 1.0 mm
+dv:Ge/RF14/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF15#############
+s:Ge/RF15/Parent = "RidgeGroup"
+s:Ge/RF15/Type = "TsRidgeFilter"
+s:Ge/RF15/Material   = "Lucite"
+d:Ge/RF15/TransX = 0.0 mm
+d:Ge/RF15/TransY =-16 mm
+d:Ge/RF15/TransZ =12.25 mm
+s:Ge/RF15/DrawingStyle = "Solid"
+s:Ge/RF15/Color = "red"
+b:Ge/RF15/PrintInformation = "True"
+dv:Ge/RF15/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF15/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF15/Width = 12.0 mm
+d:Ge/RF15/Length = 1.0 mm
+dv:Ge/RF15/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF16#############
+s:Ge/RF16/Parent = "RidgeGroup"
+s:Ge/RF16/Type = "TsRidgeFilter"
+s:Ge/RF16/Material   = "Lucite"
+d:Ge/RF16/TransX = 0.0 mm
+d:Ge/RF16/TransY =-15 mm
+d:Ge/RF16/TransZ =12.25 mm
+s:Ge/RF16/DrawingStyle = "Solid"
+s:Ge/RF16/Color = "red"
+b:Ge/RF16/PrintInformation = "True"
+dv:Ge/RF16/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF16/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF16/Width = 12.0 mm
+d:Ge/RF16/Length = 1.0 mm
+dv:Ge/RF16/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF17#############
+s:Ge/RF17/Parent = "RidgeGroup"
+s:Ge/RF17/Type = "TsRidgeFilter"
+s:Ge/RF17/Material   = "Lucite"
+d:Ge/RF17/TransX = 0.0 mm
+d:Ge/RF17/TransY =-14 mm
+d:Ge/RF17/TransZ =12.25 mm
+s:Ge/RF17/DrawingStyle = "Solid"
+s:Ge/RF17/Color = "red"
+b:Ge/RF17/PrintInformation = "True"
+dv:Ge/RF17/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF17/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF17/Width = 12.0 mm
+d:Ge/RF17/Length = 1.0 mm
+dv:Ge/RF17/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF18#############
+s:Ge/RF18/Parent = "RidgeGroup"
+s:Ge/RF18/Type = "TsRidgeFilter"
+s:Ge/RF18/Material   = "Lucite"
+d:Ge/RF18/TransX = 0.0 mm
+d:Ge/RF18/TransY =-13 mm
+d:Ge/RF18/TransZ =12.25 mm
+s:Ge/RF18/DrawingStyle = "Solid"
+s:Ge/RF18/Color = "red"
+b:Ge/RF18/PrintInformation = "True"
+dv:Ge/RF18/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF18/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF18/Width = 12.0 mm
+d:Ge/RF18/Length = 1.0 mm
+dv:Ge/RF18/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF19#############
+s:Ge/RF19/Parent = "RidgeGroup"
+s:Ge/RF19/Type = "TsRidgeFilter"
+s:Ge/RF19/Material   = "Lucite"
+d:Ge/RF19/TransX = 0.0 mm
+d:Ge/RF19/TransY =-12 mm
+d:Ge/RF19/TransZ =12.25 mm
+s:Ge/RF19/DrawingStyle = "Solid"
+s:Ge/RF19/Color = "red"
+b:Ge/RF19/PrintInformation = "True"
+dv:Ge/RF19/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF19/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF19/Width = 12.0 mm
+d:Ge/RF19/Length = 1.0 mm
+dv:Ge/RF19/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF20#############
+s:Ge/RF20/Parent = "RidgeGroup"
+s:Ge/RF20/Type = "TsRidgeFilter"
+s:Ge/RF20/Material   = "Lucite"
+d:Ge/RF20/TransX = 0.0 mm
+d:Ge/RF20/TransY =-11 mm
+d:Ge/RF20/TransZ =12.25 mm
+s:Ge/RF20/DrawingStyle = "Solid"
+s:Ge/RF20/Color = "red"
+b:Ge/RF20/PrintInformation = "True"
+dv:Ge/RF20/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF20/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF20/Width = 12.0 mm
+d:Ge/RF20/Length = 1.0 mm
+dv:Ge/RF20/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF21#############
+s:Ge/RF21/Parent = "RidgeGroup"
+s:Ge/RF21/Type = "TsRidgeFilter"
+s:Ge/RF21/Material   = "Lucite"
+d:Ge/RF21/TransX = 0.0 mm
+d:Ge/RF21/TransY =-10 mm
+d:Ge/RF21/TransZ =12.25 mm
+s:Ge/RF21/DrawingStyle = "Solid"
+s:Ge/RF21/Color = "red"
+b:Ge/RF21/PrintInformation = "True"
+dv:Ge/RF21/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF21/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF21/Width = 12.0 mm
+d:Ge/RF21/Length = 1.0 mm
+dv:Ge/RF21/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF22#############
+s:Ge/RF22/Parent = "RidgeGroup"
+s:Ge/RF22/Type = "TsRidgeFilter"
+s:Ge/RF22/Material   = "Lucite"
+d:Ge/RF22/TransX = 0.0 mm
+d:Ge/RF22/TransY =-9 mm
+d:Ge/RF22/TransZ =12.25 mm
+s:Ge/RF22/DrawingStyle = "Solid"
+s:Ge/RF22/Color = "red"
+b:Ge/RF22/PrintInformation = "True"
+dv:Ge/RF22/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF22/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF22/Width = 12.0 mm
+d:Ge/RF22/Length = 1.0 mm
+dv:Ge/RF22/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF23#############
+s:Ge/RF23/Parent = "RidgeGroup"
+s:Ge/RF23/Type = "TsRidgeFilter"
+s:Ge/RF23/Material   = "Lucite"
+d:Ge/RF23/TransX = 0.0 mm
+d:Ge/RF23/TransY =-8 mm
+d:Ge/RF23/TransZ =12.25 mm
+s:Ge/RF23/DrawingStyle = "Solid"
+s:Ge/RF23/Color = "red"
+b:Ge/RF23/PrintInformation = "True"
+dv:Ge/RF23/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF23/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF23/Width = 12.0 mm
+d:Ge/RF23/Length = 1.0 mm
+dv:Ge/RF23/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF24#############
+s:Ge/RF24/Parent = "RidgeGroup"
+s:Ge/RF24/Type = "TsRidgeFilter"
+s:Ge/RF24/Material   = "Lucite"
+d:Ge/RF24/TransX = 0.0 mm
+d:Ge/RF24/TransY =-7 mm
+d:Ge/RF24/TransZ =12.25 mm
+s:Ge/RF24/DrawingStyle = "Solid"
+s:Ge/RF24/Color = "red"
+b:Ge/RF24/PrintInformation = "True"
+dv:Ge/RF24/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF24/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF24/Width = 12.0 mm
+d:Ge/RF24/Length = 1.0 mm
+dv:Ge/RF24/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF25#############
+s:Ge/RF25/Parent = "RidgeGroup"
+s:Ge/RF25/Type = "TsRidgeFilter"
+s:Ge/RF25/Material   = "Lucite"
+d:Ge/RF25/TransX = 0.0 mm
+d:Ge/RF25/TransY =-6 mm
+d:Ge/RF25/TransZ =12.25 mm
+s:Ge/RF25/DrawingStyle = "Solid"
+s:Ge/RF25/Color = "red"
+b:Ge/RF25/PrintInformation = "True"
+dv:Ge/RF25/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF25/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF25/Width = 12.0 mm
+d:Ge/RF25/Length = 1.0 mm
+dv:Ge/RF25/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF26#############
+s:Ge/RF26/Parent = "RidgeGroup"
+s:Ge/RF26/Type = "TsRidgeFilter"
+s:Ge/RF26/Material   = "Lucite"
+d:Ge/RF26/TransX = 0.0 mm
+d:Ge/RF26/TransY =-5 mm
+d:Ge/RF26/TransZ =12.25 mm
+s:Ge/RF26/DrawingStyle = "Solid"
+s:Ge/RF26/Color = "red"
+b:Ge/RF26/PrintInformation = "True"
+dv:Ge/RF26/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF26/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF26/Width = 12.0 mm
+d:Ge/RF26/Length = 1.0 mm
+dv:Ge/RF26/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF27#############
+s:Ge/RF27/Parent = "RidgeGroup"
+s:Ge/RF27/Type = "TsRidgeFilter"
+s:Ge/RF27/Material   = "Lucite"
+d:Ge/RF27/TransX = 0.0 mm
+d:Ge/RF27/TransY =-4 mm
+d:Ge/RF27/TransZ =12.25 mm
+s:Ge/RF27/DrawingStyle = "Solid"
+s:Ge/RF27/Color = "red"
+b:Ge/RF27/PrintInformation = "True"
+dv:Ge/RF27/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF27/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF27/Width = 12.0 mm
+d:Ge/RF27/Length = 1.0 mm
+dv:Ge/RF27/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF28#############
+s:Ge/RF28/Parent = "RidgeGroup"
+s:Ge/RF28/Type = "TsRidgeFilter"
+s:Ge/RF28/Material   = "Lucite"
+d:Ge/RF28/TransX = 0.0 mm
+d:Ge/RF28/TransY =-3 mm
+d:Ge/RF28/TransZ =12.25 mm
+s:Ge/RF28/DrawingStyle = "Solid"
+s:Ge/RF28/Color = "red"
+b:Ge/RF28/PrintInformation = "True"
+dv:Ge/RF28/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF28/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF28/Width = 12.0 mm
+d:Ge/RF28/Length = 1.0 mm
+dv:Ge/RF28/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF29#############
+s:Ge/RF29/Parent = "RidgeGroup"
+s:Ge/RF29/Type = "TsRidgeFilter"
+s:Ge/RF29/Material   = "Lucite"
+d:Ge/RF29/TransX = 0.0 mm
+d:Ge/RF29/TransY =-2 mm
+d:Ge/RF29/TransZ =12.25 mm
+s:Ge/RF29/DrawingStyle = "Solid"
+s:Ge/RF29/Color = "red"
+b:Ge/RF29/PrintInformation = "True"
+dv:Ge/RF29/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF29/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF29/Width = 12.0 mm
+d:Ge/RF29/Length = 1.0 mm
+dv:Ge/RF29/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF30#############
+s:Ge/RF30/Parent = "RidgeGroup"
+s:Ge/RF30/Type = "TsRidgeFilter"
+s:Ge/RF30/Material   = "Lucite"
+d:Ge/RF30/TransX = 0.0 mm
+d:Ge/RF30/TransY =-1 mm
+d:Ge/RF30/TransZ =12.25 mm
+s:Ge/RF30/DrawingStyle = "Solid"
+s:Ge/RF30/Color = "red"
+b:Ge/RF30/PrintInformation = "True"
+dv:Ge/RF30/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF30/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF30/Width = 12.0 mm
+d:Ge/RF30/Length = 1.0 mm
+dv:Ge/RF30/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF31#############
+s:Ge/RF31/Parent = "RidgeGroup"
+s:Ge/RF31/Type = "TsRidgeFilter"
+s:Ge/RF31/Material   = "Lucite"
+d:Ge/RF31/TransX = 0.0 mm
+d:Ge/RF31/TransY =0 mm
+d:Ge/RF31/TransZ =12.25 mm
+s:Ge/RF31/DrawingStyle = "Solid"
+s:Ge/RF31/Color = "red"
+b:Ge/RF31/PrintInformation = "True"
+dv:Ge/RF31/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF31/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF31/Width = 12.0 mm
+d:Ge/RF31/Length = 1.0 mm
+dv:Ge/RF31/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF32#############
+s:Ge/RF32/Parent = "RidgeGroup"
+s:Ge/RF32/Type = "TsRidgeFilter"
+s:Ge/RF32/Material   = "Lucite"
+d:Ge/RF32/TransX = 0.0 mm
+d:Ge/RF32/TransY =1 mm
+d:Ge/RF32/TransZ =12.25 mm
+s:Ge/RF32/DrawingStyle = "Solid"
+s:Ge/RF32/Color = "red"
+b:Ge/RF32/PrintInformation = "True"
+dv:Ge/RF32/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF32/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF32/Width = 12.0 mm
+d:Ge/RF32/Length = 1.0 mm
+dv:Ge/RF32/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF33#############
+s:Ge/RF33/Parent = "RidgeGroup"
+s:Ge/RF33/Type = "TsRidgeFilter"
+s:Ge/RF33/Material   = "Lucite"
+d:Ge/RF33/TransX = 0.0 mm
+d:Ge/RF33/TransY =2 mm
+d:Ge/RF33/TransZ =12.25 mm
+s:Ge/RF33/DrawingStyle = "Solid"
+s:Ge/RF33/Color = "red"
+b:Ge/RF33/PrintInformation = "True"
+dv:Ge/RF33/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF33/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF33/Width = 12.0 mm
+d:Ge/RF33/Length = 1.0 mm
+dv:Ge/RF33/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF34#############
+s:Ge/RF34/Parent = "RidgeGroup"
+s:Ge/RF34/Type = "TsRidgeFilter"
+s:Ge/RF34/Material   = "Lucite"
+d:Ge/RF34/TransX = 0.0 mm
+d:Ge/RF34/TransY =3 mm
+d:Ge/RF34/TransZ =12.25 mm
+s:Ge/RF34/DrawingStyle = "Solid"
+s:Ge/RF34/Color = "red"
+b:Ge/RF34/PrintInformation = "True"
+dv:Ge/RF34/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF34/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF34/Width = 12.0 mm
+d:Ge/RF34/Length = 1.0 mm
+dv:Ge/RF34/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF35#############
+s:Ge/RF35/Parent = "RidgeGroup"
+s:Ge/RF35/Type = "TsRidgeFilter"
+s:Ge/RF35/Material   = "Lucite"
+d:Ge/RF35/TransX = 0.0 mm
+d:Ge/RF35/TransY =4 mm
+d:Ge/RF35/TransZ =12.25 mm
+s:Ge/RF35/DrawingStyle = "Solid"
+s:Ge/RF35/Color = "red"
+b:Ge/RF35/PrintInformation = "True"
+dv:Ge/RF35/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF35/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF35/Width = 12.0 mm
+d:Ge/RF35/Length = 1.0 mm
+dv:Ge/RF35/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF36#############
+s:Ge/RF36/Parent = "RidgeGroup"
+s:Ge/RF36/Type = "TsRidgeFilter"
+s:Ge/RF36/Material   = "Lucite"
+d:Ge/RF36/TransX = 0.0 mm
+d:Ge/RF36/TransY =5 mm
+d:Ge/RF36/TransZ =12.25 mm
+s:Ge/RF36/DrawingStyle = "Solid"
+s:Ge/RF36/Color = "red"
+b:Ge/RF36/PrintInformation = "True"
+dv:Ge/RF36/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF36/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF36/Width = 12.0 mm
+d:Ge/RF36/Length = 1.0 mm
+dv:Ge/RF36/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF37#############
+s:Ge/RF37/Parent = "RidgeGroup"
+s:Ge/RF37/Type = "TsRidgeFilter"
+s:Ge/RF37/Material   = "Lucite"
+d:Ge/RF37/TransX = 0.0 mm
+d:Ge/RF37/TransY =6 mm
+d:Ge/RF37/TransZ =12.25 mm
+s:Ge/RF37/DrawingStyle = "Solid"
+s:Ge/RF37/Color = "red"
+b:Ge/RF37/PrintInformation = "True"
+dv:Ge/RF37/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF37/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF37/Width = 12.0 mm
+d:Ge/RF37/Length = 1.0 mm
+dv:Ge/RF37/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF38#############
+s:Ge/RF38/Parent = "RidgeGroup"
+s:Ge/RF38/Type = "TsRidgeFilter"
+s:Ge/RF38/Material   = "Lucite"
+d:Ge/RF38/TransX = 0.0 mm
+d:Ge/RF38/TransY =7 mm
+d:Ge/RF38/TransZ =12.25 mm
+s:Ge/RF38/DrawingStyle = "Solid"
+s:Ge/RF38/Color = "red"
+b:Ge/RF38/PrintInformation = "True"
+dv:Ge/RF38/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF38/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF38/Width = 12.0 mm
+d:Ge/RF38/Length = 1.0 mm
+dv:Ge/RF38/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF39#############
+s:Ge/RF39/Parent = "RidgeGroup"
+s:Ge/RF39/Type = "TsRidgeFilter"
+s:Ge/RF39/Material   = "Lucite"
+d:Ge/RF39/TransX = 0.0 mm
+d:Ge/RF39/TransY =8 mm
+d:Ge/RF39/TransZ =12.25 mm
+s:Ge/RF39/DrawingStyle = "Solid"
+s:Ge/RF39/Color = "red"
+b:Ge/RF39/PrintInformation = "True"
+dv:Ge/RF39/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF39/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF39/Width = 12.0 mm
+d:Ge/RF39/Length = 1.0 mm
+dv:Ge/RF39/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF40#############
+s:Ge/RF40/Parent = "RidgeGroup"
+s:Ge/RF40/Type = "TsRidgeFilter"
+s:Ge/RF40/Material   = "Lucite"
+d:Ge/RF40/TransX = 0.0 mm
+d:Ge/RF40/TransY =9 mm
+d:Ge/RF40/TransZ =12.25 mm
+s:Ge/RF40/DrawingStyle = "Solid"
+s:Ge/RF40/Color = "red"
+b:Ge/RF40/PrintInformation = "True"
+dv:Ge/RF40/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF40/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF40/Width = 12.0 mm
+d:Ge/RF40/Length = 1.0 mm
+dv:Ge/RF40/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF41#############
+s:Ge/RF41/Parent = "RidgeGroup"
+s:Ge/RF41/Type = "TsRidgeFilter"
+s:Ge/RF41/Material   = "Lucite"
+d:Ge/RF41/TransX = 0.0 mm
+d:Ge/RF41/TransY =10 mm
+d:Ge/RF41/TransZ =12.25 mm
+s:Ge/RF41/DrawingStyle = "Solid"
+s:Ge/RF41/Color = "red"
+b:Ge/RF41/PrintInformation = "True"
+dv:Ge/RF41/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF41/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF41/Width = 12.0 mm
+d:Ge/RF41/Length = 1.0 mm
+dv:Ge/RF41/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF42#############
+s:Ge/RF42/Parent = "RidgeGroup"
+s:Ge/RF42/Type = "TsRidgeFilter"
+s:Ge/RF42/Material   = "Lucite"
+d:Ge/RF42/TransX = 0.0 mm
+d:Ge/RF42/TransY =11 mm
+d:Ge/RF42/TransZ =12.25 mm
+s:Ge/RF42/DrawingStyle = "Solid"
+s:Ge/RF42/Color = "red"
+b:Ge/RF42/PrintInformation = "True"
+dv:Ge/RF42/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF42/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF42/Width = 12.0 mm
+d:Ge/RF42/Length = 1.0 mm
+dv:Ge/RF42/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF43#############
+s:Ge/RF43/Parent = "RidgeGroup"
+s:Ge/RF43/Type = "TsRidgeFilter"
+s:Ge/RF43/Material   = "Lucite"
+d:Ge/RF43/TransX = 0.0 mm
+d:Ge/RF43/TransY =12 mm
+d:Ge/RF43/TransZ =12.25 mm
+s:Ge/RF43/DrawingStyle = "Solid"
+s:Ge/RF43/Color = "red"
+b:Ge/RF43/PrintInformation = "True"
+dv:Ge/RF43/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF43/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF43/Width = 12.0 mm
+d:Ge/RF43/Length = 1.0 mm
+dv:Ge/RF43/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF44#############
+s:Ge/RF44/Parent = "RidgeGroup"
+s:Ge/RF44/Type = "TsRidgeFilter"
+s:Ge/RF44/Material   = "Lucite"
+d:Ge/RF44/TransX = 0.0 mm
+d:Ge/RF44/TransY =13 mm
+d:Ge/RF44/TransZ =12.25 mm
+s:Ge/RF44/DrawingStyle = "Solid"
+s:Ge/RF44/Color = "red"
+b:Ge/RF44/PrintInformation = "True"
+dv:Ge/RF44/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF44/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF44/Width = 12.0 mm
+d:Ge/RF44/Length = 1.0 mm
+dv:Ge/RF44/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF45#############
+s:Ge/RF45/Parent = "RidgeGroup"
+s:Ge/RF45/Type = "TsRidgeFilter"
+s:Ge/RF45/Material   = "Lucite"
+d:Ge/RF45/TransX = 0.0 mm
+d:Ge/RF45/TransY =14 mm
+d:Ge/RF45/TransZ =12.25 mm
+s:Ge/RF45/DrawingStyle = "Solid"
+s:Ge/RF45/Color = "red"
+b:Ge/RF45/PrintInformation = "True"
+dv:Ge/RF45/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF45/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF45/Width = 12.0 mm
+d:Ge/RF45/Length = 1.0 mm
+dv:Ge/RF45/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF46#############
+s:Ge/RF46/Parent = "RidgeGroup"
+s:Ge/RF46/Type = "TsRidgeFilter"
+s:Ge/RF46/Material   = "Lucite"
+d:Ge/RF46/TransX = 0.0 mm
+d:Ge/RF46/TransY =15 mm
+d:Ge/RF46/TransZ =12.25 mm
+s:Ge/RF46/DrawingStyle = "Solid"
+s:Ge/RF46/Color = "red"
+b:Ge/RF46/PrintInformation = "True"
+dv:Ge/RF46/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF46/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF46/Width = 12.0 mm
+d:Ge/RF46/Length = 1.0 mm
+dv:Ge/RF46/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF47#############
+s:Ge/RF47/Parent = "RidgeGroup"
+s:Ge/RF47/Type = "TsRidgeFilter"
+s:Ge/RF47/Material   = "Lucite"
+d:Ge/RF47/TransX = 0.0 mm
+d:Ge/RF47/TransY =16 mm
+d:Ge/RF47/TransZ =12.25 mm
+s:Ge/RF47/DrawingStyle = "Solid"
+s:Ge/RF47/Color = "red"
+b:Ge/RF47/PrintInformation = "True"
+dv:Ge/RF47/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF47/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF47/Width = 12.0 mm
+d:Ge/RF47/Length = 1.0 mm
+dv:Ge/RF47/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF48#############
+s:Ge/RF48/Parent = "RidgeGroup"
+s:Ge/RF48/Type = "TsRidgeFilter"
+s:Ge/RF48/Material   = "Lucite"
+d:Ge/RF48/TransX = 0.0 mm
+d:Ge/RF48/TransY =17 mm
+d:Ge/RF48/TransZ =12.25 mm
+s:Ge/RF48/DrawingStyle = "Solid"
+s:Ge/RF48/Color = "red"
+b:Ge/RF48/PrintInformation = "True"
+dv:Ge/RF48/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF48/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF48/Width = 12.0 mm
+d:Ge/RF48/Length = 1.0 mm
+dv:Ge/RF48/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF49#############
+s:Ge/RF49/Parent = "RidgeGroup"
+s:Ge/RF49/Type = "TsRidgeFilter"
+s:Ge/RF49/Material   = "Lucite"
+d:Ge/RF49/TransX = 0.0 mm
+d:Ge/RF49/TransY =18 mm
+d:Ge/RF49/TransZ =12.25 mm
+s:Ge/RF49/DrawingStyle = "Solid"
+s:Ge/RF49/Color = "red"
+b:Ge/RF49/PrintInformation = "True"
+dv:Ge/RF49/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF49/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF49/Width = 12.0 mm
+d:Ge/RF49/Length = 1.0 mm
+dv:Ge/RF49/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF50#############
+s:Ge/RF50/Parent = "RidgeGroup"
+s:Ge/RF50/Type = "TsRidgeFilter"
+s:Ge/RF50/Material   = "Lucite"
+d:Ge/RF50/TransX = 0.0 mm
+d:Ge/RF50/TransY =19 mm
+d:Ge/RF50/TransZ =12.25 mm
+s:Ge/RF50/DrawingStyle = "Solid"
+s:Ge/RF50/Color = "red"
+b:Ge/RF50/PrintInformation = "True"
+dv:Ge/RF50/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF50/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF50/Width = 12.0 mm
+d:Ge/RF50/Length = 1.0 mm
+dv:Ge/RF50/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF51#############
+s:Ge/RF51/Parent = "RidgeGroup"
+s:Ge/RF51/Type = "TsRidgeFilter"
+s:Ge/RF51/Material   = "Lucite"
+d:Ge/RF51/TransX = 0.0 mm
+d:Ge/RF51/TransY =20 mm
+d:Ge/RF51/TransZ =12.25 mm
+s:Ge/RF51/DrawingStyle = "Solid"
+s:Ge/RF51/Color = "red"
+b:Ge/RF51/PrintInformation = "True"
+dv:Ge/RF51/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF51/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF51/Width = 12.0 mm
+d:Ge/RF51/Length = 1.0 mm
+dv:Ge/RF51/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF52#############
+s:Ge/RF52/Parent = "RidgeGroup"
+s:Ge/RF52/Type = "TsRidgeFilter"
+s:Ge/RF52/Material   = "Lucite"
+d:Ge/RF52/TransX = 0.0 mm
+d:Ge/RF52/TransY =21 mm
+d:Ge/RF52/TransZ =12.25 mm
+s:Ge/RF52/DrawingStyle = "Solid"
+s:Ge/RF52/Color = "red"
+b:Ge/RF52/PrintInformation = "True"
+dv:Ge/RF52/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF52/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF52/Width = 12.0 mm
+d:Ge/RF52/Length = 1.0 mm
+dv:Ge/RF52/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF53#############
+s:Ge/RF53/Parent = "RidgeGroup"
+s:Ge/RF53/Type = "TsRidgeFilter"
+s:Ge/RF53/Material   = "Lucite"
+d:Ge/RF53/TransX = 0.0 mm
+d:Ge/RF53/TransY =22 mm
+d:Ge/RF53/TransZ =12.25 mm
+s:Ge/RF53/DrawingStyle = "Solid"
+s:Ge/RF53/Color = "red"
+b:Ge/RF53/PrintInformation = "True"
+dv:Ge/RF53/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF53/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF53/Width = 12.0 mm
+d:Ge/RF53/Length = 1.0 mm
+dv:Ge/RF53/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF54#############
+s:Ge/RF54/Parent = "RidgeGroup"
+s:Ge/RF54/Type = "TsRidgeFilter"
+s:Ge/RF54/Material   = "Lucite"
+d:Ge/RF54/TransX = 0.0 mm
+d:Ge/RF54/TransY =23 mm
+d:Ge/RF54/TransZ =12.25 mm
+s:Ge/RF54/DrawingStyle = "Solid"
+s:Ge/RF54/Color = "red"
+b:Ge/RF54/PrintInformation = "True"
+dv:Ge/RF54/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF54/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF54/Width = 12.0 mm
+d:Ge/RF54/Length = 1.0 mm
+dv:Ge/RF54/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF55#############
+s:Ge/RF55/Parent = "RidgeGroup"
+s:Ge/RF55/Type = "TsRidgeFilter"
+s:Ge/RF55/Material   = "Lucite"
+d:Ge/RF55/TransX = 0.0 mm
+d:Ge/RF55/TransY =24 mm
+d:Ge/RF55/TransZ =12.25 mm
+s:Ge/RF55/DrawingStyle = "Solid"
+s:Ge/RF55/Color = "red"
+b:Ge/RF55/PrintInformation = "True"
+dv:Ge/RF55/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF55/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF55/Width = 12.0 mm
+d:Ge/RF55/Length = 1.0 mm
+dv:Ge/RF55/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF56#############
+s:Ge/RF56/Parent = "RidgeGroup"
+s:Ge/RF56/Type = "TsRidgeFilter"
+s:Ge/RF56/Material   = "Lucite"
+d:Ge/RF56/TransX = 0.0 mm
+d:Ge/RF56/TransY =25 mm
+d:Ge/RF56/TransZ =12.25 mm
+s:Ge/RF56/DrawingStyle = "Solid"
+s:Ge/RF56/Color = "red"
+b:Ge/RF56/PrintInformation = "True"
+dv:Ge/RF56/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF56/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF56/Width = 12.0 mm
+d:Ge/RF56/Length = 1.0 mm
+dv:Ge/RF56/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF57#############
+s:Ge/RF57/Parent = "RidgeGroup"
+s:Ge/RF57/Type = "TsRidgeFilter"
+s:Ge/RF57/Material   = "Lucite"
+d:Ge/RF57/TransX = 0.0 mm
+d:Ge/RF57/TransY =26 mm
+d:Ge/RF57/TransZ =12.25 mm
+s:Ge/RF57/DrawingStyle = "Solid"
+s:Ge/RF57/Color = "red"
+b:Ge/RF57/PrintInformation = "True"
+dv:Ge/RF57/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF57/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF57/Width = 12.0 mm
+d:Ge/RF57/Length = 1.0 mm
+dv:Ge/RF57/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF58#############
+s:Ge/RF58/Parent = "RidgeGroup"
+s:Ge/RF58/Type = "TsRidgeFilter"
+s:Ge/RF58/Material   = "Lucite"
+d:Ge/RF58/TransX = 0.0 mm
+d:Ge/RF58/TransY =27 mm
+d:Ge/RF58/TransZ =12.25 mm
+s:Ge/RF58/DrawingStyle = "Solid"
+s:Ge/RF58/Color = "red"
+b:Ge/RF58/PrintInformation = "True"
+dv:Ge/RF58/XPoints =22
+0            0         0.95         0.95         2.46         2.46         3.26         3.26         4.77         4.77         5.72         5.72         7.23         7.23         8.03         8.03         9.54         9.54        10.49        10.49           12           12 mm
+dv:Ge/RF58/ZPoints =22
+0           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF58/Width = 12.0 mm
+d:Ge/RF58/Length = 1.0 mm
+dv:Ge/RF58/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF59#############
+s:Ge/RF59/Parent = "RidgeGroup"
+s:Ge/RF59/Type = "TsRidgeFilter"
+s:Ge/RF59/Material   = "Lucite"
+d:Ge/RF59/TransX = 0.0 mm
+d:Ge/RF59/TransY =28 mm
+d:Ge/RF59/TransZ =12.25 mm
+s:Ge/RF59/DrawingStyle = "Solid"
+s:Ge/RF59/Color = "red"
+b:Ge/RF59/PrintInformation = "True"
+dv:Ge/RF59/XPoints =24
+0            0         1.51         1.51         2.46         2.46         3.97         3.97         4.77         4.77         6.28         6.28         7.23         7.23         8.74         8.74         9.54         9.54        11.05        11.05           12           12           12           12 mm
+dv:Ge/RF59/ZPoints =24
+0            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2            0 mm
+d:Ge/RF59/Width = 12.0 mm
+d:Ge/RF59/Length = 1.0 mm
+dv:Ge/RF59/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+                       
+############  RF60#############
+s:Ge/RF60/Parent = "RidgeGroup"
+s:Ge/RF60/Type = "TsRidgeFilter"
+s:Ge/RF60/Material   = "Lucite"
+d:Ge/RF60/TransX = 0.0 mm
+d:Ge/RF60/TransY =29 mm
+d:Ge/RF60/TransZ =12.25 mm
+s:Ge/RF60/DrawingStyle = "Solid"
+s:Ge/RF60/Color = "red"
+b:Ge/RF60/PrintInformation = "True"
+dv:Ge/RF60/XPoints =24
+0            0         0.75         0.75         1.55         1.55         3.06         3.06         4.01         4.01         5.52         5.52         6.32         6.32         7.83         7.83         8.78         8.78        10.29        10.29        11.09        11.09           12           12 mm
+dv:Ge/RF60/ZPoints =24
+0            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2           13           13            2            2         24.5         24.5            2            2            0 mm
+d:Ge/RF60/Width = 12.0 mm
+d:Ge/RF60/Length = 1.0 mm
+dv:Ge/RF60/Displacement = 5 -24.0 -12.0 0.0 12.0 24.0 mm
+# GRAPHICS
+#sv:Ph/Default/Modules = 1 "g4em-standard_opt0"
+#b:Ts/PauseBeforeQuit = "True"
+#s:Gr/ViewA/Type = "OpenGL"
+#i:Gr/ViewA/WindowSizeX = 700
+#i:Gr/ViewA/WindowSizeY = 700
+#d:Gr/ViewA/Theta = 0 deg
+#d:Gr/ViewA/Phi = 0 deg
+#s:Gr/ViewA/Projection = "Orthogonal"
+#d:Gr/ViewA/PerspectiveAngle = 0 deg
+#u:Gr/ViewA/Zoom = 2
+#b:Gr/ViewA/HiddenLineRemovalForTrajectories = "True"
+#b:Gr/ViewA/IncludeAxes = "true"
+#d:Gr/ViewA/AxesSize = 3 cm
